@@ -5,8 +5,8 @@
 }
 
 :root {
-    --border-color-main: #508559;
-    --color-accent: #508559;
+    --border-color-main: #017ABE;
+    --color-accent: #188268;
     --color-secondary: #FF6868;
 }
 
@@ -50,8 +50,9 @@ body {
     margin: 0;
     overflow: hidden;
     height: 100vh;
-    background: linear-gradient(180deg, #FFF9BF 18.04%, #F5F5F5 78.24%);
-    position: relative;
+    background: linear-gradient(180deg, #D5F8BF 18.04%, #FCFFDB 78.24%);
+  
+    
 
     /* background-color: rgb(255, 255, 255); */
 }
@@ -91,6 +92,7 @@ body {
 
 
 
+
 .bg-main {
     position: absolute;
     z-index: -1;
@@ -107,7 +109,8 @@ h1 {
 }
 
 h2 {
-    font-size: 2.1rem;
+    font-family: trap;
+    font-size: 3rem;
     line-height: 2rem;
 }
 
@@ -170,17 +173,17 @@ a {
 }
 
 .border-yellow {
-    border: 1px solid;
+    border: 3px solid;
     border-color: #FFDF6F;
 }
 
 .border-orange {
-    border: 1px solid;
-    border-color: #F69A10;
+    border: 3px solid;
+ 
 }
 
 .border-grey {
-    border: 1px solid;
+    border: px solid;
     border-color: #d8d2c9;
 }
 
@@ -195,7 +198,7 @@ a {
 
 .main-border-lemon {
     border-width: .4rem;
-    border-color: #8ACF71;
+    border-color: #017ABE;
 }
 
 .main-border-red {
@@ -226,13 +229,18 @@ a {
 .table-cell {
     font-weight: 600;
     font-size: 0.8rem;
-    height: 38px;
-    border: 1px solid;
+    height: 50px;
+    border: solid;
+    border-width: 0px 2px 2px 2px;
     display: flex;
     align-items: center;
     padding: 0 0 0 20px;
 }
 
+.table-cell:first-child {
+    border-width: 2px 2px 2px 2px;
+    
+}
 /*--------------Table styles----------------*/
 
 
@@ -252,7 +260,6 @@ a {
 
 
 .page-wrapper {
-
     display: flex;
     flex-direction: column;
     max-width: 1450px;
@@ -263,7 +270,6 @@ a {
     align-items: center;
     justify-content: center;
     border-width: 5px;
-
 }
 
 header {
@@ -316,22 +322,7 @@ nav {
 
 
 /*------nav font colors based on page------*/
-.white-fonts {
-    color: rgb(204, 204, 204);
-}
 
-.black-fonts {
-    color: #554E4E;
-}
-
-.orange-fonts {
-    color: #F69A10;
-    
-}
-
-.lemon-fonts {
-    color: rgb(176, 211, 141);
-}
 
 ul {
 
@@ -373,11 +364,6 @@ li {
     position: relative;  
 }
 
-.infinite-slider img {
-    height: 40px;
-    position: relative;
-}
-
 .primary {
     position: relative;
     animation: primary 100s linear infinite;
@@ -390,28 +376,13 @@ li {
   .redirect {
     animation-direction: reverse;
   }
-  @keyframes primary {
-    from {
-      left: 0%;
-    }
-    to {
-      left: -100%;
-    }
-  }
-  
-  @keyframes secondary {
-    from {
-      left: 100%;
-    }
-    to {
-      left: 0%;
-    }
-  }
+ 
 
 .preview {
-    padding: 2rem 0px;
+  
     overflow: hidden;
     display: flex;
+    flex-direction: row;
     height: 90%;
     width: 100%;
     position: relative;
@@ -429,51 +400,27 @@ li {
     position: relative;
 }
 
-.slider-indicator {
-    display: flex;
-    position: absolute;
-    bottom: 7%;
-    left: 6.5%;
-    z-index: 2;
-
-}
-
-.white-box {
-    fill: aquamarine;
-    mix-blend-mode: difference;
-}
-
 
 
 .hero-copy {
-    max-width: 600px;
+    /* max-width: 600px; */
+    height: 100%;
     max-height: 500px;
     width: 60%;
     /* margin-bottom: 5%; */
-    margin-left: 7%;
+    align-self: center;
+
+}
+.copy {
+    /* max-width: 600px; */
+    height: 100%;
+    max-width:420px;
+    /* margin-bottom: 5%; */
+    margin-left: 15%;
     align-self: center;
 
 }
 
-.hero-copy img {
-    max-height: 80px;
-    height: 8vh;
-    min-height: 30px;
-}
-
-.image-box{
-    position: relative;
-    margin-right: 5%;
-}
-
-.var{
-    position: absolute;
-    right: 36%;
-    top: 35%;
-    z-index: 2;
-    transition: 2s;
-    animation: rotate 5s linear 0s infinite;
-    }
 
 
 @keyframes rotate {
@@ -487,9 +434,17 @@ li {
 
 
 .hero-image {
-    height: 40vh;
+    height: 100%;
+    width: 60%;
+    background-image: url(pics/big_astherics.png);
+    background-size: 100px;
    
-    max-height: 350px;
+    flex-grow: 1.5;
+    background-repeat: repeat;
+    border: 0 solid;
+    border-left-width: 3px;
+    border-color: inherit;
+    
 }
 
 
@@ -501,6 +456,8 @@ li {
     display: flex;
     flex-direction: row;
     font-weight: 600;
+    border-top: solid 3px;
+    border-color: inherit;
 }
 
 
@@ -512,38 +469,6 @@ li {
     justify-content: space-between;
     min-width: 350px;
     padding: 5px 25px;
-}
-
-
-/*---------all portfolio related styles----------*/
-
-.portfolio-line {
-    width: fit-content;
-    display: flex;
-    flex-direction: row;
-    justify-items: flex-start;
-    height: 50%;
-}
-
-.p-thumbnail-frame {
-    width: 40%;
-    height: 100%;
-    overflow: hidden;
-    border: 1px solid #FFDF6F;
-    min-width: 350px;
-}
-
-.project {
-    height: 100%;
-    width: 100%;
-}
-
-.low-bg {
-    opacity: 50%;
-}
-
-.announcement:hover>#hide {
-    background-color: #F61063;
 }
 
 
