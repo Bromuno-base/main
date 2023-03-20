@@ -4,9 +4,42 @@
     font-size: 16px;
 }
 
+body {
+    font-family: 'poppins', sans-serif;
+
+    @font-face {
+        font-family: 'trap', sans-serif;
+        src: url(fonts/trap-bold.otf) format('opentype');
+    };
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    background-color: whitesmoke;
+    border-color: inherit;
+    /* background: linear-gradient(180deg, #FFF9BF 18.04%, #F5F5F5 78.24%); */
+    /* background-color: rgb(255, 255, 255); */
+}
+
+
+body::before {
+    content: "";
+    height: 17vh;
+    width: 100vw;
+    background-image: url(pics/big_astherics.png);
+    background-repeat: repeat;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 :root {
-    --border-color-main: #FF6868;
-    --color-accent: #FF6868;
+    --border-color-main: #CC2460;
+    --color-accent: #188268;
     --color-secondary: #A026FF;
 }
 
@@ -41,40 +74,6 @@ button:hover {
     font-size: 1.8rem;
 }
 
-body {
-    font-family: 'poppins', sans-serif;
-
-    @font-face {
-        font-family: 'trap', sans-serif;
-        src: url(fonts/trap-bold.otf) format('opentype');
-    }
-
-    ;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    overflow: hidden;
-    height: 100vh;
-    background: linear-gradient(180deg, #FFF9BF 18.04%, #F5F5F5 78.24%);
-
-
-    /* background-color: rgb(255, 255, 255); */
-}
-
-
-body::before {
-    content: "";
-    height: 17vh;
-    width: 100vw;
-    background-image: url(pics/big_astherics.png);
-    background-repeat: repeat;
-    z-index: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 
 
 
@@ -112,6 +111,12 @@ h1 {
 h2 {
     font-size: 2.1rem;
     line-height: 2rem;
+    font-family: trap;
+}
+h3 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-family: trap;
 }
 
 h4 {
@@ -169,20 +174,6 @@ a {
 /*--------------border style goes here----------------*/
 
 
-.main-border-lemon {
-    border-width: .4rem;
-    border-color: #8ACF71;
-}
-
-.main-border-red {
-    border-width: .4rem;
-    border-color: #fe70a479;
-}
-
-.main-border-purple {
-    border-width: .4rem;
-    border-color: #9D7CF9;
-}
 
 
 .hover-box :hover {
@@ -246,6 +237,10 @@ header {
     max-height: 60px;
     height: 9%;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 
 }
 
@@ -257,14 +252,13 @@ header {
     width: auto;
     max-width: fit-content;
     padding: 14px 32px;
-    padding-left: 2rem;
+    padding-left: 4rem;
     border-right: solid;
+    border-color: inherit;
+    
 }
 
 .header-mid {
-
-
-     
 
     display: flex;
     flex-grow: 1;
@@ -273,38 +267,35 @@ header {
     overflow: hidden;
     justify-content: start;
     gap: 30px;
-    border-right: 2px solid;
-
+    border-color: inherit;
+   
+        /* border-right: 2px solid; */
 }
 
 nav {
-
-    border: 0px;
+    border-left: 3px solid;
     padding: 5px 25px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: fit-content;
+    Animation: 2s slide-out;
+    animation-fill-mode:forwards;
+    transition: all 2s ease-in;
+    position: relative;
+    left: 100%;
+    border-color: inherit;
+  }
 
-}
-
-
-/*------nav font colors based on page------*/
-.white-fonts {
-    color: rgb(204, 204, 204);
-}
-
-.black-fonts {
-    color: #554E4E;
-}
-
-.orange-fonts {
-    color: #F69A10;
-
-}
-
-.lemon-fonts {
-    color: rgb(176, 211, 141);
+@keyframes slide-out {
+    0% {left: 0;
+        display: flex;
+       
+    }
+    100% {left: 60%;
+        width: 0;;
+    }
+    
 }
 
 ul {
@@ -321,6 +312,8 @@ ul {
 
 li {
     color: inherit;
+    width: fit-content;
+
 }
 
 .join-us {
@@ -332,11 +325,18 @@ li {
     flex-direction: row;
     gap: 10px;
     border-left: 2px solid;
+    border-color: inherit;
 
 }
 
-.preview-portfolio {
+.clients { 
+    display: flex;
+    flex-grow: 4;
+    border-left: 3px solid;
+    border-color:  inherit;
+}
 
+.preview-about {
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -347,52 +347,6 @@ li {
 }
 
 
-.infinite-slider {
-    /* height: 100px; */
-    size: 3rem;
-    color: var(--border-color-main);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: start;
-    width: 100%;
-    padding: 1.8rem 0px;
-    border: solid;
-    position: relative;
-    border-left-width: 0px;
-    animation: 3s move-in ease-out;
-}
-
-
-.infinite-slider div {
-    width: 100%;
-    height: 50px;
-    position: relative;
-    background-image: url(pics/track-line.png);
-    background-repeat: repeat;
-}
-
-.white-box {
-    fill: aquamarine;
-    mix-blend-mode: difference;
-}
-
-.hero-copy {
-    max-width: 600px;
-    max-height: 500px;
-    width: 60%;
-    /* margin-bottom: 5%; */
-    margin-left: 7%;
-    align-self: center;
-}
-
-.hero-copy img {
-    max-height: 80px;
-    height: 8vh;
-    min-height: 30px;
-}
-
 .footer {
     height: auto;
     min-height: 60px;
@@ -400,6 +354,8 @@ li {
     display: flex;
     flex-direction: row;
     font-weight: 600;
+    border-top: solid;
+    border-color: inherit;
 }
 
 
@@ -415,19 +371,82 @@ li {
 
 /*---------all portfolio related styles----------*/
 
-.portfolio-line {
+.content-area {
     width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-items: flex-start;
-    /* height: 90%; */
+    align-items: center;
+    height: fit-content;
     overflow: auto;
     scrollbar-width: none;
     border-width: 3px 0px;
-    animation: 1s 0s slide ease-out;
+    animation: 2s 0s slide ease-out;
     position: relative;
+    text-align: center;
+}
+.content-area p {
+    margin-top: 10%;  
+    max-width: 500px;
+    width: 60%;
+}
+.founders {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    @font-face {
+        font-family: 'skribble', sans-serif;
+        src: url(fonts/skribble.ttf) format('truetype');
+    }
+
+}
+.founders-content {
+   
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    font-family: skribble;
+    font-size: 1.1rem;
+    text-align: center;
+}
+.big-contributors {
+    display: grid;
+    
+    grid: repeat(3, 50px) / auto-flow;
+    
+    font-family: skribble;
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+.pic-frame {
+    border-radius: 60%;
+    min-height: 100px;
+    min-width: 100px;
+    max-height: 150px;
+    max-width: 150px;
+    overflow: hidden;
+   
+    border:#00702d solid 5px;
+}
+.pic-frame img {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
 }
 
+.close {
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: solid 3px;
+    height: 100%;
+    border-color: inherit;
+}
 /* +++++++++++++on load animations++++++++++++++++++ */
 @keyframes move-in {
     0% {
@@ -454,19 +473,19 @@ li {
 
 @keyframes slide {
     0% {
-        left: -60%;
+        left: -20%;
         opacity: .0;
         border-bottom: 3px solid;
 
     }
 
-    20% {
+    40% {
         opacity: .0
     }
 
-    30% {
+    50% {
         opacity: .100;
-        transform: skewX(30);
+      
     }
 
     100% {
@@ -589,4 +608,14 @@ li {
 
 
 
-/*---------all portfolio related styles----------*/
+/*---------Responsive design----------*/
+@media screen and (max-width: 400px)
+
+{
+    body{
+        background-color: #FF6868;
+        color: white;
+    }
+}
+       
+ 
