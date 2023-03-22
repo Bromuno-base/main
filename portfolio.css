@@ -230,6 +230,7 @@ a {
     align-items: center;
     justify-content: center;
     border-width: 5px;
+    overflow: hidden;
 
 }
 
@@ -246,33 +247,49 @@ header {
     max-height: 60px;
     height: 9%;
     font-weight: 500;
+    white-space: nowrap;
 
 }
 
 .logo-and-guest {
 
+
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 15px;
-    width: auto;
-    max-width: fit-content;
-    padding: 14px 32px;
-    padding-left: 2rem;
-    border-right: solid;
+    width: fit-content;
+    /* max-width: fit-content; */
+    padding: 14px 16px;
+    /* padding-left: 4rem; */
+    border-right: 2px solid;
+    
+}
+
+.logo-and-guest div {
+    width: 30px;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 60%;
+
+    /* background-image: url(/pics/big_astherics.png);
+    object-fit: contain; */
+}
+.user-dp img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
 }
 
 .header-mid {
-
-
-     
-
+ 
     display: flex;
     flex-grow: 1;
     padding: 5px 30px;
     align-items: center;
     overflow: hidden;
     justify-content: start;
-    gap: 30px;
+    /* gap: 30px; */
     border-right: 2px solid;
 
 }
@@ -582,11 +599,84 @@ li {
     opacity: 50%;
 }
 
-.announcement:hover>#hide {
-    background-color: #F61063;
+
+
+.logo-mobile {
+    display:none;
+    
+}
+.mobile-nav {
+    display: none;
 }
 
 
+@media screen and (max-width: 950px)
 
-
-/*---------all portfolio related styles----------*/
+{
+    * {
+        font-size: 14px;
+    }
+    .logo-mobile {
+        display:block;
+            }
+            .logo-desktop {
+                display: none;
+            }
+            .logo-and-guest {
+                padding: 10px;
+                gap: 5px;
+            }
+      nav {
+        display: none;
+      }
+           
+      .join-us {
+        display: none;
+      }
+      .mobile-nav {
+        border-bottom: 3px solid;
+        border-color: inherit;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 15px;
+        max-height: 60px;
+        height: 5%;
+      }
+    }
+    .mobile-nav > a {
+        display: inline-block;
+        flex-direction: row;
+   
+       padding: 0px 15px;
+       border-left: 3px solid;
+       align-items: center;
+       justify-content: start;
+      }
+      
+      ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        width: 95%;
+        padding: 15px;
+        justify-content: space-evenly;
+        margin: 0%;
+        max-width: 400px;
+      }
+      li>h4 {
+        white-space: nowrap;
+        font-size: 12px;
+        
+      }
+      li {
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        /* justify-content: center; */
+        align-items: center;
+         }
+         .preview-portfolio {
+            flex-direction: column;
+         }

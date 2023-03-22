@@ -237,6 +237,7 @@ header {
     overflow: hidden;
     z-index: 0;
     font-weight: 500;
+    white-space: nowrap;
     }
 
 .logo-and-guest {
@@ -248,8 +249,8 @@ header {
     gap: 15px;
     width: fit-content;
     /* max-width: fit-content; */
-    padding: 14px 32px;
-    padding-left: 4rem;
+    padding: 14px 16px;
+    /* padding-left: 1rem; */
     
 }
 
@@ -276,8 +277,8 @@ header {
     align-items: center;
     overflow: hidden;
     justify-content: start;
-    gap: 30px;
-
+    /* gap: 30px; */
+width: auto;
 }
 
 nav {
