@@ -8,21 +8,22 @@
     <title>Welcome to Bromuno!</title>
     <link rel="icon" type="image/x-icon" href="/icons/fav.ico">
     <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.cdnfonts.com/css/clash-display" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=poppins=swap" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="home">
     <div class="body-overlay"></div>
     <!-- <img class="bg-main" src="pics/background-image.png" alt="a tranparent colorful background image"> -->
-    <div class="page-wrapper">
-        <header class="border">
+    <div class="wrapper">
+        <header>
             <!-- this is where the top header and nav will be-->
 
             <div class="logo-and-guest">
-                <a><img class="logo-mobile" src="icons/fav.png" alt="logo"></a>
+                <a><img class="logo-mobile responsive-flex" src="icons/fav.png" alt="logo"></a>
 
                 <a href="#">
                     <img class="logo-desktop" src="pics/index-logo.svg" alt="bromuno logo">
@@ -31,10 +32,10 @@
 
 
             </div>
-            <div class="header-mid inner-border">
+            <div class="title">
                 <h4 style="min-width: 300px;">welcome to bromuno</h4>
             </div>
-            <nav class="inner-border">
+            <nav>
                 <ul>
                     <li style="color: #C78016;"><a href="/index.html">Home</a></li>
                     <li><a href="/portfolio.html">Works</a></li>
@@ -43,8 +44,8 @@
                 </ul>
 
             </nav>
-            <div class="join-us inner-border">
-                <a href="#" style="align-self: center;">
+            <div class="join-us">
+                <a href="turf.bromuno.com" style="align-self: center;">
                     <h4>Join us!</h4>
                 </a>
                 <svg width="30" height="15" viewBox="0 0 30 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,7 +56,8 @@
 
             </div>
         </header>
-        <div class="mobile-nav">
+        <!-- mobile content -->
+        <div class="mobile-nav responsive-flex">
             <ul>
                 <li style="color: #C78016;"><a href="/index.html">Home</a></li>
                 <li><a href="/portfolio.html">Portfolio</a></li>
@@ -69,14 +71,45 @@
                 </li>
             </a>
         </div>
-        <div class="infinite-slider"><img class="primary" src="pics/infinite-content.svg" alt=""><img class="secondary">
-        </div>
-        <div class="preview">
 
+        <div class="infinite-slider">
+
+            <div class="slider-container">
+                <div class="span-holder">
+                    <span>GRAPHICS</span>
+                    <span>&#9734</span>
+                    <span>UI/UX </span>
+                    <span>&#9734</span>
+                    <span>BRANDING</span>
+                    <span>&#9734</span>
+                    <span>WEB DEVELOPMENT</span>
+                    <span>&#9734</span>
+
+                </div>
+                <div class="span-holder">
+                    <span>GRAPHICS</span>
+                    <span>&#9734</span>
+                    <span>UI/UX </span>
+                    <span>&#9734</span>
+                    <span>BRANDING</span>
+                    <span>&#9734</span>
+                    <span>WEB DEVELOPMENT</span>
+                    <span>&#9734</span>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+        <main>
 
             <div class="hero-copy">
-                <img src="pics/100-pro.svg" alt="100% pro"
-                    style="font-family: trap; font-weight:500; font-size: 2rem;  ">
+                <h1>100%</h1>
+                <!-- <H1>Keep Doing</H1> -->
+
 
                 <h4> In addition to quality concept direction and project stratgey, we work with only
                     the best in the industry to make your idea a reality and ofcourse, only the best.</h4>
@@ -86,24 +119,55 @@
             <div class="image-box"> <img class="hero-image" src="pics/curly-box.svg"><img class="var"
                     src="pics/var-star.svg"></div>
 
-        </div>
-        <div class="infinite-slider"><img class="primary redirect" src="pics/infinite-content.svg" alt=""><img
-                class="secondary redirect" src="pics/infinite-content.svg" alt=""></div>
-                <div class="announcement-mobile inner-border">
-                <h4 id="hide">Bromuno Academy</h4>
-                <h4 style="color: #FF6868; text-transform: uppercase;">Coming Soon</h4>
+        </main>
+        <div class="infinite-slider">
+            <div class="slider-container">
+                <div class="span-holder">
+                    <span>GRAPHICS</span>
+                    <span>&#9734</span>
+                    <span>UI/UX </span>
+                    <span>&#9734</span>
+                    <span>BRANDING</span>
+                    <span>&#9734</span>
+                    <span>WEB DEVELOPMENT</span>
+                    <span>&#9734</span>
+
+                </div>
+                <div class="span-holder">
+                    <span>GRAPHICS</span>
+                    <span>&#9734</span>
+                    <span>UI/UX </span>
+                    <span>&#9734</span>
+                    <span>BRANDING</span>
+                    <span>&#9734</span>
+                    <span>WEB DEVELOPMENT</span>
+                    <span>&#9734</span>
+
+                </div>
+
+
+
+
             </div>
-        <div class="footer border">
-            <div class="header-mid">
+        </div>
+
+
+        <div class="announcement-mobile responsive-flex">
+            <h4>Bromuno Academy</h4>
+            <h4 style="text-transform: uppercase;">Coming Soon</h4>
+        </div>
+
+        <footer>
+            <div style="min-width: 30%;" class="logo-and-guest">
                 <a href="/get-work-done.html"><a href="#">Get work done</a></a>
 
             </div>
 
-            <div class="announcement inner-border">
+            <div class="title">
                 <h4 id="hide">Bromuno Academy</h4>
                 <h4 style="color: #FF6868; text-transform: uppercase;">Coming Soon</h4>
             </div>
-            <div class="join-us inner-border">
+            <div class="join-us">
                 <a href="#" style="align-self: center;">
                     <h4>Sign in</h4>
                 </a>
@@ -114,7 +178,7 @@
                 </svg>
 
             </div>
-            <div class="join-us show inner-border">
+            <div class="join-us responsive-flex">
                 <a href="#" style="align-self: center;">
                     <h4>Sign in</h4>
                 </a>
@@ -125,7 +189,9 @@
                 </svg>
 
             </div>
-        </div>
+        </footer>
+
+
         <!-- PAGE WRAPPER ENDS HERE -->
     </div>
 </body>
