@@ -438,7 +438,7 @@ li {
     flex-direction: row;
     justify-items: flex-start;
     /* height: 90%; */
-    overflow: auto;
+    overflow-x: auto;
     scrollbar-width: none;
     border-width: 3px 0px;
     animation: 1s 0s slide ease-out;
@@ -493,6 +493,21 @@ li {
 
 }
 
+/* drag button */
+.dragButton {
+    position: absolute;
+    /* top: 50%; */
+    left: 0;
+    /* width: 100px; */
+    /* height: 40px; */
+    /* background-color: blue; */
+    /* color: white; */
+    /* border: none; */
+    /* border-radius: 20px; */
+    text-align: center;
+    /* transform: translateY(-50%); */
+    cursor: pointer;
+  }
 /* +++++++++++++on load animations++++++++++++++++++ */
 
 .portfolio-line::-webkit-scrollbar {
@@ -527,7 +542,7 @@ li {
 }
 
 .p-thumbnail-frame::before {
-    content: "project name";
+    content: var(--thumbnail-name);
     position: absolute;
     z-index: 2;
     left: 0%;
@@ -537,8 +552,9 @@ li {
     transition: all 1s;
     display: inline;
 }
+
 .p-thumbnail-frame::after {
-    content: "project title";
+    content: var(--thumbnail-title);
     position: absolute;
     z-index: 2;
   left: 0%;
